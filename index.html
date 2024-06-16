@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="description" content="Contact form">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./resources/style.css">
+    <link rel="stylesheet" href="./resources/reset.css">
+
+    <title>Frontend Mentor | Contact form</title>    
+</head>
+<body>
+    <div class="container">
+        <form id="myForm">
+            <h1>Contact Us</h1>
+            <div class="names">
+                <section class="first-name">
+                    <label for="f-name">First Name *</label><br>
+                    <input type="text" name="f-name" id="f-name">
+                    <p class="error-p" id="first_name_error" style="display: none;">This field is required</p>
+                </section>
+        
+                <section class="last-name">
+                    <label for="l-name">Last Name *</label><br>
+                    <input type="text" name="l-name" id="l-name">
+                    <p class="error-p" id="last_name_error" style="display: none;">This field is required</p>
+                </section>
+            </div>
+            
+            <section class="email-address">
+                <label for="email-add">Email Address *</label>
+                <input type="email" name="email-add" id="email-add">
+                <p class="error-p" id="email_error" style="display: none;">Please enter a valid email address</p>
+            </section>
+            
+            <span>Query Type *</span>
+            <section class="query-type">
+                <div class="radiobox">
+                    <div class="gen-enq" id="gen-enq">
+                        <input type="radio" name="query-type" id="general" value="general">
+                        <label for="general">General Enquiry</label>
+                    </div>
+                    <div class="sup-req" id="sup-req">
+                        <input type="radio" name="query-type" id="support" value="support">
+                        <label for="support">Support Request</label>
+                    </div>    
+                </div>                            
+                <p class="error-p" id="query-type-error" style="display: none;">Please select a query type</p>
+            </section>
+    
+            <section class="extra-info">
+                <label for="extra">Message *</label>
+                <br>
+                <textarea id="extra" name="extra" rows="4" cols="40"></textarea>
+                <p class="error-p" id="textarea_error" style="display: none;">This field is required</p>
+              </section>
+              
+            <section class="consent">
+                <div class="agr">
+                    <input type="checkbox" name="consent-agreement" id="agreement" value="agreement">
+                    <label for="agreement">I consent to being contacted by the team *</label>
+                </div>
+                <p class="error-p" id="agreement_error" style="display: none;">To submit this form, please consent to being contacted</p>
+            </section>
+            
+            <section class="submission">
+                <input type="submit" value="Submit" id="submit-button">
+            </section>
+        </form>
+    </div>
+    
+    <div id="submit-div" style="display: none;">
+        <div class="submitted">
+            <img src="./resources/images/icon-success-check.svg" alt="Succes icon on main page" class="success-icon">
+            <h2>Message sent!</h2>
+        </div>        
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#" aria-label="Author's page">Polina</a>.
+    </footer>
+
+    <script src="./resources/script.js"></script>
+</body>
+</html>
